@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using ProvaF.Domain.Entities;
+using ProvaF.Domain.Exceptions;
 using ProvaF.Domain.Repositories;
 
 namespace ProvaF.Domain.Services
@@ -18,9 +19,9 @@ namespace ProvaF.Domain.Services
         {
             var conta = _repository.Obter(numeroConta);
 
-            //TODO
             if (conta == null)
-                throw new ArgumentOutOfRangeException();
+                throw new BusinessRuleValidationException($"A conta informada não existe.");
+
             return conta;
         }
         

@@ -22,18 +22,18 @@ namespace ProvaF.Domain.Entities
         public void Sacar(decimal valorSaque)
         {
             if(valorSaque <= 0)
-                throw new BusinessRuleValidationException("Valor inválido.");
+                throw new ValorInvalidoValidationException("Valor inválido.");
             
             if(Saldo< valorSaque)
-                throw new BusinessRuleValidationException("Saldo insuficiente.");
+                throw new ValorInvalidoValidationException("Saldo insuficiente.");
 
             this.Saldo -= valorSaque;
         }
 
-        public void Depositar(int valorDoDeposito)
+        public void Depositar(decimal valorDoDeposito)
         {
             if(valorDoDeposito <= 0)
-                throw new BusinessRuleValidationException("Valor inválido.");
+                throw new ValorInvalidoValidationException("Valor inválido.");
 
             this.Saldo += valorDoDeposito;
         }

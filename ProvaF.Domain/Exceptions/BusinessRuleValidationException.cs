@@ -16,4 +16,26 @@ namespace ProvaF.Domain.Exceptions
             this.Details = details;
         }
     }
+
+    public class ContaInvalidaValidationException : BusinessRuleValidationException
+    {
+        public ContaInvalidaValidationException(string message) : base(message)
+        {
+        }
+
+        public ContaInvalidaValidationException(string message, string details) : base(message, details)
+        {
+        }
+    }
+
+    public class ValorInvalidoValidationException : BusinessRuleValidationException
+    {
+        public ValorInvalidoValidationException(string message) : base(message)
+        {
+        }
+
+        public ValorInvalidoValidationException(string message, string details) : base(message, details)
+        {
+        }
+    }
 }

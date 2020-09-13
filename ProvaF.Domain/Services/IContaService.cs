@@ -6,5 +6,6 @@ namespace ProvaF.Domain.Services
     {
         decimal ObterSaldo(int numeroConta);
         decimal Sacar(int numeroConta, decimal valorSaque);
+        decimal Depositar(int numeroConta, decimal valorDeposito);
     }
 }

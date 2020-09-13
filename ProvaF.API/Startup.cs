@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ProvaF.Domain.Exceptions;
 using ProvaF.Domain.Repositories;
 using ProvaF.Domain.Services;
 using ProvaF.Infrastructure.Data;
@@ -35,6 +36,7 @@ namespace ProvaF.API
                 .AddDbContext<ProvaFDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IContaRepository, ContaRepository>();
             services.AddScoped<IContaService, ContaService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

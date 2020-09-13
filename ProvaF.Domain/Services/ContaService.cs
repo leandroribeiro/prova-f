@@ -20,7 +20,7 @@ namespace ProvaF.Domain.Services
             var conta = _repository.Obter(numeroConta);
 
             if (conta == null)
-                throw new BusinessRuleValidationException($"A conta informada não existe.");
+                throw new ContaInvalidaValidationException($"A conta informada não existe.");
 
             return conta;
         }
@@ -43,9 +43,13 @@ namespace ProvaF.Domain.Services
             return conta.Saldo;
         }
 
-        public decimal ConsultarSaldo(int numeroConta)
+        public decimal Depositar(int numeroConta, decimal valorDeposito)
         {
             var conta = ObterConta(numeroConta);
+
+            conta.Depositar(valorDeposito);
+
+            _repository.Salvar(conta);
 
             return conta.Saldo;
         }

@@ -18,7 +18,7 @@ namespace ProvaF.Domain.Tests.UnitTests
             // ACT
             // ASSERT
             model.Invoking(s => s.Sacar(valorDoSaque))
-                .Should().Throw<BusinessRuleValidationException>()
+                .Should().Throw<ValorInvalidoValidationException>()
                 .WithMessage("Saldo insuficiente.");
             
         }
@@ -34,7 +34,7 @@ namespace ProvaF.Domain.Tests.UnitTests
             // ACT
             // ASSERT
             model.Invoking(s => s.Sacar(valorDoSaque))
-                .Should().Throw<BusinessRuleValidationException>()
+                .Should().Throw<ValorInvalidoValidationException>()
                 .WithMessage("Valor inválido.");
             
         }
@@ -66,7 +66,7 @@ namespace ProvaF.Domain.Tests.UnitTests
             // ACT
             // ASSERT
             model.Invoking(s => s.Depositar(valorDoDeposito))
-                .Should().Throw<BusinessRuleValidationException>()
+                .Should().Throw<ValorInvalidoValidationException>()
                 .WithMessage("Valor inválido.");
 
         }

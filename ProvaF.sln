@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaF.Domain.Tests", "Prov
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaF.Infrastructure", "ProvaF.Infrastructure\ProvaF.Infrastructure.csproj", "{5D74C185-CDD6-44AE-8BDC-35F92AECB191}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaF.API", "ProvaF.API\ProvaF.API.csproj", "{3969C18A-4B41-41B3-8E9C-0745081814D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{5D74C185-CDD6-44AE-8BDC-35F92AECB191}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D74C185-CDD6-44AE-8BDC-35F92AECB191}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D74C185-CDD6-44AE-8BDC-35F92AECB191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3969C18A-4B41-41B3-8E9C-0745081814D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3969C18A-4B41-41B3-8E9C-0745081814D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3969C18A-4B41-41B3-8E9C-0745081814D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3969C18A-4B41-41B3-8E9C-0745081814D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

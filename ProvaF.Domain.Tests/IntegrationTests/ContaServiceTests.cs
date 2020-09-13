@@ -64,8 +64,19 @@ namespace ProvaF.Domain.Tests.IntegrationTests
             _service.Invoking(s => s.Sacar(numeroConta, valorSaque))
                 .Should().Throw<BusinessRuleValidationException>()
                 .WithMessage("A conta informada não existe.");
+        }
+        
+        [Fact]
+        public void Dado_uma_ContaValida_Quando_ConsultarSaldo_Entao_deve_retornar_o_saldo_atual()
+        {
+            // ARRANGE
+            var numeroConta = 3;
             
+            // ACT
+            var saldo = _service.ConsultarSaldo(numeroConta);
             
+            // ASSERT
+            saldo.Should().Be(300);
 
         }
     }

@@ -43,5 +43,11 @@ namespace ProvaF.Domain.Services
             return conta.Saldo;
         }
 
+        public decimal ConsultarSaldo(int numeroConta)
+        {
+            var conta = ObterConta(numeroConta);
+
+            return conta.Saldo;
+        }
     }
 }

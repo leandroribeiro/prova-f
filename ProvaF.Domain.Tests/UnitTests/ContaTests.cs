@@ -12,7 +12,7 @@ namespace ProvaF.Domain.Tests.UnitTests
         {
             // ARRANGE
             var numeroDaConta = 123;
-            var model = new Conta(123);
+            var model = new Conta(numeroDaConta);
             var valorDoSaque = 100;
             
             // ACT
@@ -28,7 +28,7 @@ namespace ProvaF.Domain.Tests.UnitTests
         {
             // ARRANGE
             var numeroDaConta = 123;
-            var model = new Conta(123);
+            var model = new Conta(numeroDaConta);
             var valorDoSaque = -333;
             
             // ACT
@@ -44,7 +44,7 @@ namespace ProvaF.Domain.Tests.UnitTests
         {
             // ARRANGE
             var numeroDaConta = 123;
-            var model = new Conta(123);
+            var model = new Conta(numeroDaConta);
             var valorDoDeposito = 100;
             
             // ACT
@@ -60,7 +60,7 @@ namespace ProvaF.Domain.Tests.UnitTests
         {
             // ARRANGE
             var numeroDaConta = 123;
-            var model = new Conta(123);
+            var model = new Conta(numeroDaConta);
             var valorDoDeposito = -333;
             
             // ACT

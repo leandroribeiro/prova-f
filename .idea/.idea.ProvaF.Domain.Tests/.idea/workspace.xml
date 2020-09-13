@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="90784c3e-88d1-46dd-adb0-b7d5b10f010b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProvaF.Domain.Tests.sln" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ProvaF.Domain/Class1.cs" />
+        <option value="$PROJECT_DIR$/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Infrastructure/Class1.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Domain.Tests/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Infrastructure/Data/ProvaFDbContext.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Domain/Entities/Conta.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Infrastructure/Data/ContaConfiguration.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Infrastructure/Data/BaseRepository.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Infrastructure/Data/ContaRepository.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Domain/Repositories/IContaRepository.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Domain/Services/ContaService.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Domain/Services/IContaService.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Domain.Tests/ContaServiceTests.cs" />
+        <option value="$PROJECT_DIR$/ProvaF.Domain.Tests/appsettings.json" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hQynj3zgOc4jn7VPt18ENUJDjY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90784c3e-88d1-46dd-adb0-b7d5b10f010b" name="Default Changelist" comment="" />
+      <created>1599957785506</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599957785506</updated>
+      <workItem from="1599957803866" duration="933000" />
+      <workItem from="1599960612689" duration="1149000" />
+      <workItem from="1599961802444" duration="69000" />
+      <workItem from="1599961989638" duration="3115000" />
+      <workItem from="1600020627437" duration="624000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="shellPath" value="C:\Program Files\PowerShell\7\pwsh.exe" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="342" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1599962171677">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="342" y="255" key="Rider.ProjectTemplateDialog.Size/0.0.2560.1040@0.0.2560.1040" timestamp="1599962171677" />
+    <state x="425" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1599964239711">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="425" y="230" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040@0.0.2560.1040" timestamp="1599964239711" />
+  </component>
+</project>

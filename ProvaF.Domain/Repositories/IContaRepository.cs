@@ -5,6 +5,7 @@ namespace ProvaF.Domain.Repositories
 {
     public interface IContaRepository
     {
-        Task<Conta> ObterAsync(int numeroConta);
+        Conta Obter(int numeroConta);
+        bool Salvar(Conta conta);
     }
 }

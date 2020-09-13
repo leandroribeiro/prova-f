@@ -13,10 +13,17 @@ namespace ProvaF.Infrastructure.Data
         {
             
         }
-        public Task<Conta> ObterAsync(int numeroConta)
+        public Conta Obter(int numeroConta)
         {
-            return _context.Contas.FirstOrDefaultAsync(x => x.Id == numeroConta);
+            return _context.Contas.FirstOrDefault(x => x.Id == numeroConta);
         }
-        
+
+        public bool Salvar(Conta conta)
+        {
+            _context.Contas.Update(conta);
+            var registrosAfetados = _context.SaveChanges();
+
+            return registrosAfetados > 0;
+        }
     }
 }

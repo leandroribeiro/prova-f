@@ -7,7 +7,7 @@ services:
     container_name: "postgres_docker"
     environment:
       - POSTGRES_USER=provaf_user
-      - POSTGRES_PASSWORD="S3nh4F0rt3!"
+      - POSTGRES_PASSWORD=S3nh4F0rt3!
       - POSTGRES_DB=provaf
     ports:
       - "54321:5432"

@@ -16,12 +16,10 @@ Desafio proposto da empresa fictícia FH, utilizando:
 
 2. `cd prova-f`
 
-3. `docker-compose build`
+3. `docker-compose up --build`
 
-4. `docker-compose up`
+4. `cd ProvaF.Infrastructure`
 
-5. `cd ProvaF.Infrastructure`
+5. `dotnet ef database update`
 
-6. `dotnet ef database update`
-
-7.  Acesse no seu navegador http://localhost:5000
+6.  Acesse no seu navegador http://localhost:5000

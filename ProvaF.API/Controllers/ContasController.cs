@@ -43,7 +43,7 @@ namespace ProvaF.API.Controllers
         }
 
         [HttpPost("{numero}/depositar")]
-        [ProducesResponseType(typeof(decimal), (int) HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(DepositarResponse), (int) HttpStatusCode.OK)]
         [ProducesResponseType((int) HttpStatusCode.NotFound)]
         [ProducesResponseType((int) HttpStatusCode.BadRequest)]
         public ActionResult<decimal> Post([FromRoute] int numero, [FromBody] DepositarRequest model)
@@ -51,8 +51,9 @@ namespace ProvaF.API.Controllers
             try
             {
                 var saldo = _service.Depositar(numero, model.Valor);
+                var response = new DepositarResponse(numero, saldo);
                 
-                return new OkObjectResult(saldo);
+                return new OkObjectResult(response);
             }
             catch (ValorInvalidoValidationException e)
             {
@@ -70,7 +71,7 @@ namespace ProvaF.API.Controllers
         }
         
         [HttpPost("{numero}/sacar")]
-        [ProducesResponseType(typeof(decimal), (int) HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(SacarResponse), (int) HttpStatusCode.OK)]
         [ProducesResponseType((int) HttpStatusCode.NotFound)]
         [ProducesResponseType((int) HttpStatusCode.BadRequest)]
         public ActionResult<decimal> Post([FromRoute] int numero, [FromBody] SacarRequest model)
@@ -78,8 +79,9 @@ namespace ProvaF.API.Controllers
             try
             {
                 var saldo = _service.Sacar(numero, model.Valor);
-                
-                return new OkObjectResult(saldo);
+                var response = new SacarResponse(numero, saldo);
+
+                return new OkObjectResult(response);
             }
             catch (ValorInvalidoValidationException e)
             {

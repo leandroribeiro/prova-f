@@ -20,4 +20,8 @@ Desafio proposto da empresa fictícia FH, utilizando:
 
 4. `docker-compose up`
 
-5.  Acesse no seu navegador http://localhost:5000
+5. `cd ProvaF.Infrastructure`
+
+6. `dotnet ef database update`
+
+7.  Acesse no seu navegador http://localhost:5000

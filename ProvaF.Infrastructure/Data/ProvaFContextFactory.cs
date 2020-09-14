@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.IO;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
 
 namespace ProvaF.Infrastructure.Data
 {
@@ -7,10 +9,19 @@ namespace ProvaF.Infrastructure.Data
     {
         public ProvaFDbContext CreateDbContext(string[] args)
         {
-            var builder = new DbContextOptionsBuilder<ProvaFDbContext>();
-            // TODO mover para ler da própria API
-            builder.UseNpgsql("Server=127.0.0.1;Port=54321;Database=provaf;User Id=provaf_user;Password=S3nh4F0rt3!;");
-
+            var configuration = new ConfigurationBuilder()
+                   .SetBasePath(Directory.GetCurrentDirectory())
+                   .AddJsonFile("appsettings.json")
+                   .Build();
+         
+         
+              var builder = new DbContextOptionsBuilder<ProvaFDbContext>();
+         
+              var connectionString = configuration
+                          .GetConnectionString("DefaultConnection");
+         
+              builder.UseNpgsql(connectionString);
+              
             return new ProvaFDbContext(builder.Options);
         }
     }

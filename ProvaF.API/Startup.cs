@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -11,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using ProvaF.Domain.Exceptions;
 using ProvaF.Domain.Repositories;
 using ProvaF.Domain.Services;
@@ -34,8 +37,30 @@ namespace ProvaF.API
             
             services.AddEntityFrameworkNpgsql()
                 .AddDbContext<ProvaFDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            
             services.AddScoped<IContaRepository, ContaRepository>();
             services.AddScoped<IContaService, ContaService>();
+            
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo()
+                    {
+                        Title = "Prova F API v1",
+                        Version = "v1",
+                        Contact = new OpenApiContact()
+                        {
+                            Name = "Leandro Ribeiro",
+                            Email = string.Empty,
+                            Url = new Uri("https://github.com/leandroribeiro")
+                        }
+                    });
+            
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+
+            });
             
         }
 
@@ -54,6 +79,13 @@ namespace ProvaF.API
             //app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Prova F API v1");
+                c.RoutePrefix = string.Empty;
+            });
         }
     }
 }

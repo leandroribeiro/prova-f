@@ -22,7 +22,7 @@ namespace ProvaF.API.Controllers
 
         [HttpGet("{numero}/saldo")]
         [ProducesResponseType(typeof(decimal), (int) HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ContaInvalidaValidationException), (int) HttpStatusCode.NotFound)]
+        [ProducesResponseType((int) HttpStatusCode.NotFound)]
         public ActionResult<decimal> Get([FromRoute] int numero)
         {
             try
@@ -44,8 +44,8 @@ namespace ProvaF.API.Controllers
 
         [HttpPost("{numero}/depositar")]
         [ProducesResponseType(typeof(decimal), (int) HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ContaInvalidaValidationException), (int) HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(ValorInvalidoValidationException), (int) HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int) HttpStatusCode.NotFound)]
+        [ProducesResponseType((int) HttpStatusCode.BadRequest)]
         public ActionResult<decimal> Post([FromRoute] int numero, [FromBody] DepositarRequest model)
         {
             try
@@ -71,8 +71,8 @@ namespace ProvaF.API.Controllers
         
         [HttpPost("{numero}/sacar")]
         [ProducesResponseType(typeof(decimal), (int) HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ContaInvalidaValidationException), (int) HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(ValorInvalidoValidationException), (int) HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int) HttpStatusCode.NotFound)]
+        [ProducesResponseType((int) HttpStatusCode.BadRequest)]
         public ActionResult<decimal> Post([FromRoute] int numero, [FromBody] SacarRequest model)
         {
             try

@@ -7,6 +7,7 @@ WORKDIR /src
 
 COPY "ProvaF.sln" "ProvaF.sln"
 COPY "ProvaF.API/ProvaF.API.csproj" "ProvaF.API/ProvaF.API.csproj"
+COPY "ProvaF.API.Tests/ProvaF.API.Tests.csproj" "ProvaF.API.Tests/ProvaF.API.Tests.csproj"
 COPY "ProvaF.Domain/ProvaF.Domain.csproj" "ProvaF.Domain/ProvaF.Domain.csproj"
 COPY "ProvaF.Infrastructure/ProvaF.Infrastructure.csproj" "ProvaF.Infrastructure/ProvaF.Infrastructure.csproj"
 COPY "ProvaF.Domain.Tests/ProvaF.Domain.Tests.csproj" "ProvaF.Domain.Tests/ProvaF.Domain.Tests.csproj"

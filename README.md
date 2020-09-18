@@ -8,6 +8,7 @@ Desafio proposto da empresa fictícia FH, utilizando:
  - Fluent Assertions; 
  - Entity Framework Core (ORM);
  - PostGres (Database); 
+ - Redis (Cache);
  - Docker + Docker Compose;
 
 ## Instruções para execução

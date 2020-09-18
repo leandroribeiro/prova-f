@@ -21,6 +21,7 @@ namespace ProvaF.Infrastructure.Data
         public bool Salvar(Conta conta)
         {
             _context.Contas.Update(conta);
+            
             var registrosAfetados = _context.SaveChanges();
 
             return registrosAfetados > 0;

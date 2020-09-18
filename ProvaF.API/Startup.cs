@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -35,10 +36,19 @@ namespace ProvaF.API
         {
             services.AddControllers();
             
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = Configuration.GetConnectionString("Cache");
+            });
+
             services.AddEntityFrameworkNpgsql()
                 .AddDbContext<ProvaFDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             
-            services.AddScoped<IContaRepository, ContaRepository>();
+            services.AddScoped<ContaRepository>();
+            services.AddScoped<IContaRepository>(provider => new CachedContaRepository(
+                provider.GetRequiredService<ContaRepository>(),
+                provider.GetRequiredService<IDistributedCache>()));
+            
             services.AddScoped<IContaService, ContaService>();
             
             services.AddSwaggerGen(c =>
